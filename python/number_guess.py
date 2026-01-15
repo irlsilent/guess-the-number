@@ -1,11 +1,11 @@
 import random
 
-print("Hi! Welcome to the Number Guessing Game\n You have 7 chances to guess the correct number. Let's start!")
+print("Hi! Welcome to the Number Guessing Game\nYou have 7 chances to guess the correct number. Let's start!")
 
 low = int(input("Enter the lower bound of the range: "))
 high = int(input("Enter the upper bound of the range: "))
 
-print(f"\n You have 7 chance to guess a number between {low} and {high}. Let's get started!")
+print(f"\nYou have 7 chance to guess a number between {low} and {high}. Let's get started!")
 
 random_number = random.randint(low, high)
 chances = 7
@@ -16,17 +16,12 @@ while guess_counter < chances:
     guess_counter += 1
     
     if (user_guess < random_number):
-        {
-            exit
-        }
+            print(f"You are too low!\nYou have {chances-guess_counter} chances left!")
     elif (user_guess > random_number):
-        {
-            exit
-        }
+            print(f"You are too high!\nYou have {chances-guess_counter} chances left!")
     else:
-        {
-            exit
-        }
+            print(f"Congratulations! You guessed the correct number in {guess_counter} guesses!")
+            break
         
 if (guess_counter == chances):
     {
