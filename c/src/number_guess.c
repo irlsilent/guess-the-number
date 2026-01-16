@@ -4,8 +4,8 @@
 int main()
 {
     printf("Hi! Welcome to the Number Guessing Game\nYou have 7 chances to guess the correct number. Let's start! \n");
-    // Create an integer variable that will store the number we get from the user
-    int low, high, random_number, guesses;
+
+    int low, high, random_number, guess_counter=0, guess;
     int chances = 7;
 
     // Ask the user to type a number
@@ -20,8 +20,26 @@ int main()
 
     printf("You have %d chances to guess a number between %d and %d. Let's get started!", chances,low,high); 
 
-    while (guesses < chances) {
-        guesses++;
+    while (guess_counter < chances) {
+        guess_counter++;
+        printf("Enter your guess: \n");
+        scanf("%d", &guess);
+        if (random_number > guess) {
+            printf("Your guess is too high! Try again \n");
+            printf("You have %d guesses left.", chances-guess_counter);
+        }
+        else if (random_number < guess) {
+            printf("Your guess is too low! Try again \n");
+            printf("You have %d guesses left.", chances-guess_counter);
+        }
+        else {
+            printf("Congratulations! You guessed the number in %d guesses.", guess_counter);
+            break;
+        }
+
+    }
+    if (chances == guess_counter) {
+        printf("Oh no! You have used all your guesses. Better luck next time!");
     }
     return 0;
 }
