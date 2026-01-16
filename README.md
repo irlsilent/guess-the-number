@@ -12,7 +12,7 @@ You will need the following installed on your machine:
 
 - **Python 3**: [Download here](https://www.python.org/downloads/)  
 - **C Compiler** (GCC or equivalent):
-  - Windows: Install [MinGW](https://www.msys2.org/)g or use Visual Studio  
+  - Windows: Install [MinGW](https://www.msys2.org/) or use Visual Studio  
   - Linux: `sudo apt install build-essential`  
   - Mac: `xcode-select --install`
 
