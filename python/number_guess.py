@@ -13,7 +13,7 @@ while low >= high:
     low = int(input("Enter the lower bound of the range: "))
     high = int(input("Enter the upper bound of the range: "))
     
-print(f"\nYou have 7 chance to guess a number between {low} and {high}. Let's get started!")
+print(f"\nYou have 7 chances to guess a number between {low} and {high}. Let's get started!")
 
 
 random_number = random.randint(low, high)
